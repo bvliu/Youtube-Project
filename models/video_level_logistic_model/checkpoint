@@ -1,0 +1,2 @@
+model_checkpoint_path: "/Users/Brandon/development/youtube/models/video_level_logistic_model/model.ckpt-10"
+all_model_checkpoint_paths: "/Users/Brandon/development/youtube/models/video_level_logistic_model/model.ckpt-10"
