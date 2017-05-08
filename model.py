@@ -68,4 +68,4 @@ def run_training():
 	print(train_labels)
 
 if __name__ == '__main__':
-	run_training()
+	# run_training()

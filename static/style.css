@@ -1,12 +1,25 @@
-@import url(http://fonts.googleapis.com/css?family=Amatic+SC:700);
+@import url('https://fonts.googleapis.com/css?family=Pacifico|Rubik');
 
 body{
-	text-align: center
+	text-align: center;
+	font-family: 'Rubik', sans-serif;
 }
 
 h1 {
-	font-family: 'Amatic CS', cursive;
+	font-family: 'Pacifico', cursive;
 	font-weight: normal;
-	color: #8ac640;
-	font-size: 2.5em;
+}
+
+.container {
+	width: 100%;
+	height: 100%;
+	margin: 0;
+} 
+
+.container center table {
+	padding: 10px;
+}
+
+.container center table tr td table {
+	padding: 5px;
 }

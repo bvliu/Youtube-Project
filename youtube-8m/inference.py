@@ -74,7 +74,6 @@ def format_lines(video_ids, predictions, top_k):
     yield video_ids[video_index].decode('utf-8') + "," + " ".join("%i %f" % pair
                                                   for pair in line) + "\n"
 
-
 def get_input_data_tensors(reader, data_pattern, batch_size, num_readers=1):
   """Creates the section of the graph which reads the input data.
 
@@ -99,7 +98,7 @@ def get_input_data_tensors(reader, data_pattern, batch_size, num_readers=1):
                     data_pattern + "'")
     logging.info("number of input files: " + str(len(files)))
     filename_queue = tf.train.string_input_producer(
-        files, num_epochs=1, shuffle=False)
+        files, num_epochs=1, shuffle=True)
     examples_and_labels = [reader.prepare_reader(filename_queue)
                            for _ in range(num_readers)]
 
@@ -170,7 +169,7 @@ def inference(reader, train_dir, data_pattern, out_file_location, batch_size, to
 def main(unused_argv):
   logging.set_verbosity(tf.logging.INFO)
 
-  # convert feature_names and feature_sizes to lists of values
+  # convert feature_names and feature_sizes to lists of values <- input from console
   feature_names, feature_sizes = utils.GetListOfFeatureNamesAndSizes(
       FLAGS.feature_names, FLAGS.feature_sizes)
 

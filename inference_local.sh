@@ -1,6 +1,6 @@
 #!/bin/bash
 
-MODEL_DIR=/tmp/yt8m
+MODEL_DIR=/Users/Brandon/development/youtube/models
 
 python youtube-8m/inference.py \
 --output_file=$MODEL_DIR/video_level_logistic_model/predictions.csv \
